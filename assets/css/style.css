@@ -47,6 +47,15 @@
     padding: 0;
 }
 
+.footer {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.footer-email {
+    text-align: left;
+}
+
 @media (min-width: 992px) {
     .masthead {
         height: 60vh;
@@ -55,8 +64,11 @@
         padding-top: 3.5rem;
         font-size: 3.5rem;
     }
+    .footer-email {
+        text-align: right;
+    }
 }
 
 .service-text {
     text-align: justify;
-}  
+}

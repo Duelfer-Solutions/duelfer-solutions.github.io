@@ -4,6 +4,8 @@ title:  "Five Essential Security Areas for Salesforce Experience Sites"
 date:   2023-09-11 14:12:14 -0400
 author: Tamara Chance
 categories: experience-cloud
+image: assets/img/stockImages/security-lock-laptop.svg
+thumbnail: assets/img/stockImages/security-lock-laptop-thumbnail.svg
 ---
 In today's digital landscape, the security of your Salesforce Experience Sites is paramount. These sites serve as the gateway to engaging your customers, partners, and employees. So it’s crucial to protect the sensitive information they might contain, whether it’s your CRM data or user information.
 

@@ -11,58 +11,44 @@ In today's digital landscape, the security of your Salesforce Experience Sites i
 
 In this article, we’ll explore five essential security measures you should implement to safeguard your Salesforce Experience Sites and maintain the trust of your users.
 
-<!-- Insert a screenshot of MFA or the app -->
 ## Access Control and Authentication
 Whether the site is exclusively open to the public, exclusively used by authenticated users, or some combination of both, you need to ensure that the users on your site can only access the information that you want them to access.
 
 To ensure the security of your Salesforce Experience Sites, it is essential to establish robust access control and authentication mechanisms. Here are some key considerations:
 
-- **Org-wide Defaults:** External org-wide sharing settings can only be as restrictive or more restrictive than your internal org-wide sharing settings, and it is generally considered best practice to use the rule of least privilege here to grant users only the level of access they need to do their task. Start with more restrictive settings for external users and you can always open them up as needed. 
-<!-- Link to Salesforce Help doc how to set org-wide defaults -->
+- **Org-wide Defaults:** [External org-wide sharing settings](https://help.salesforce.com/s/articleView?id=sf.security_owd_external.htm&type=5) can only be as restrictive or more restrictive than your internal org-wide sharing settings, and it is generally considered best practice to use the rule of least privilege here to grant users only the level of access they need to do their task. Start with more restrictive settings for external users and you can always open them up as needed. 
 
-- **Authenticated Profiles vs. Guest User Profiles:** Set up a well-defined role hierarchy and assign appropriate profiles to Experience Site users. This ensures that each user has the necessary access rights and permissions based on their role within the organization. Guest User Profiles are automatically created when you create a new Experience site. If you have guest users accessing your site, look through their profile to ensure that you aren’t granting them access to anything they shouldn’t see. 
-<!-- Link to Salesforce Help doc how to access guest user profiles. -->
+- **Authenticated Profiles vs. Guest User Profiles:** Set up a well-defined role hierarchy and assign appropriate profiles to Experience Site users. This ensures that each user has the necessary access rights and permissions based on their role within the organization. [Guest User Profiles](https://help.salesforce.com/s/articleView?id=sf.emergency_response_ph_vm_guest_profile_config.htm&type=5) are automatically created when you create a new Experience site. If you have guest users accessing your site, look through their profile to ensure that you aren’t granting them access to anything they shouldn’t see.
 
-- **Utilizing Permission Sets and Sharing Rules:** Enhance access control by leveraging permission sets and sharing rules. These tools allow you to grant additional permissions to specific users or groups while maintaining a strong security posture. Assign permission sets and sharing rules to profiles to extend visibility to specific objects and fields. Assign the ‘View Personal Information’ set to users who need access to PII data. Guest User Sharing Rules are also created automatically when you create a new site. You can look through the Guest User Sharing Rule Access Report to see the current levels of access being granted to guest users via sharing rules.  
-<!-- Link to Salesforce Help doc for access to the guest user report. -->
+- **Utilizing Permission Sets and Sharing Rules:** Enhance access control by leveraging permission sets and sharing rules. These tools allow you to grant additional permissions to specific users or groups while maintaining a strong security posture. Assign permission sets and sharing rules to profiles to extend visibility to specific objects and fields. Assign the ‘View Concealed Field Data’ set to users who need [access to PII data](https://help.salesforce.com/s/articleView?id=sf.users_manage_personal_info_visibility.htm&type=5). Guest User Sharing Rules are also created automatically when you create a new site. You can look through the [Guest User Sharing Rule Access Report](https://help.salesforce.com/s/articleView?id=sf.networks_guest_user_access_verification.htm&type=5) to see the current levels of access being granted to guest users via sharing rules.
 
-- **Multi-Factor Authentication (MFA):** Implementing MFA adds an extra layer of security by requiring users to provide a second form of verification, such as a unique code sent to their mobile device, in addition to their username and password. 
-<!-- Link to Salesforce Help doc -->
+- **Multi-Factor Authentication (MFA):** [Implementing MFA](https://help.salesforce.com/s/articleView?id=sf.mfa_direct_login_user_perm.htm&type=5) adds an extra layer of security by requiring users to provide a second form of verification, such as a unique code sent to their mobile device, in addition to their username and password. 
 
-- **Strong Password Policies:** Enforce strict password policies, including requirements for complex passwords and regular password updates. Encourage users to choose unique, hard-to-guess passwords to protect against brute-force attacks. 
-<!-- Link to Salesforce Help doc. -->
+- **Strong Password Policies:** Enforce strict [password policies](https://help.salesforce.com/s/articleView?id=sf.admin_password.htm&type=5), including requirements for complex passwords and regular password updates. Encourage users to choose unique, hard-to-guess passwords to protect against brute-force attacks.
 
-<!-- Insert an image of the section on the field that allows you to classify sensitive data. -->
 ## Data Security and Encryption
 Securing sensitive data within your Salesforce Experience Sites is vital to prevent data breaches and unauthorized access. Consider the following measures:
 
-- **Classifying and Securing Sensitive Data:** Utilize the Personal Information-PIEMP field set to ensure that fields containing PII are properly classified. Identify and classify sensitive data within your Experience Sites, such as personally identifiable information (PII) and financial data. 
-<!-- Link to Salesforce help doc for using that classification and adding fields to the field set. -->
+- **Classifying and Securing Sensitive Data:** Utilize the [PersonalInfo_EPIM](https://help.salesforce.com/s/articleView?id=sf.users_manage_personal_info_visibility.htm&type=5) field set to ensure that fields containing PII are properly classified. Identify and classify sensitive data within your Experience Sites, such as personally identifiable information (PII) and financial data.
 
-- **Encryption:** Use Experience Cloud’s built in ‘Hide Personal Information’ setting on specific pages. When creating new fields in your org, use the Text (Encrypted) data type where applicable to protect sensitive data. Implementing encryption mechanisms adds an extra layer of protection and ensures that even if data is compromised, it remains unreadable and unusable. 
-<!-- Link to Salesforce Help doc for the Hide Personal Information setting. -->
+- **Encryption:** When creating new fields in your org, use the [Text (Encrypted)](https://help.salesforce.com/s/articleView?id=sf.fields_about_encrypted_fields.htm&type=5) data type where applicable to protect sensitive data. Implementing encryption mechanisms adds an extra layer of protection and ensures that even if data is compromised, it remains unreadable and unusable. 
 
-- **Secure Data Transfer and Integration Practices:** When integrating your Salesforce Experience Sites with external systems, ensure that data transfers occur over secure channels, such as encrypted connections (HTTPS). For CMS content outside of Salesforce consider using CMS Connect, or for access to all of your external file repositories, consider using Salesforce Files to securely connect external sources. 
-<!-- Link to Salesforce Help doc for setting up salesforce files.  -->
+- **Secure Data Transfer and Integration Practices:** When integrating your Salesforce Experience Sites with external systems, ensure that data transfers occur over secure channels, such as encrypted connections (HTTPS). For CMS content outside of Salesforce consider using [CMS Connect](https://developer.salesforce.com/docs/platform/cms/guide/cms-connect-create-connection.html), or for access to all of your external file repositories, consider using [Salesforce Files](https://help.salesforce.com/s/articleView?id=sf.collab_salesforce_files_parent.htm&type=5) to securely connect external sources.
 
-<!-- Use a stock image or create an image in Canva that has some icons from GitHub -->
 ## Secure Development Practices
 While building an Experience Cloud site involves more clicks than code, adopting secure development practices is crucial to building robust and resilient Salesforce Experience Sites. Here are some best practices:
 
-- **Follow Secure Coding Guidelines:** Adhere to secure coding guidelines Link to Salesforce doc provided by Salesforce to mitigate common security vulnerabilities. This includes practices such as input validation, output encoding, and protection against cross-site scripting (XSS) and SQL injection attacks.
+- **Follow Secure Coding Guidelines:** Adhere to [secure coding guidelines](https://developer.salesforce.com/docs/atlas.en-us.secure_coding_guide.meta/secure_coding_guide/secure_coding_guidelines.htm) provided by Salesforce to mitigate common security vulnerabilities. This includes practices such as input validation, output encoding, and protection against cross-site scripting (XSS) and SQL injection attacks.
 
-- **Secure Configuration Settings:** Grant public access on a page by page basis when necessary. Ensure that your Salesforce Experience Sites are configured with secure settings. Avoid common pitfalls such as using default credentials, leaving debugging features enabled, or mis-configuring access controls.
+- **Secure Configuration Settings:** Grant public access on a page by page basis when necessary. Ensure that your Salesforce Experience Sites are configured with [secure settings](https://help.salesforce.com/s/articleView?id=sf.networks_security.htm&type=5). Avoid common pitfalls such as using default credentials, leaving debugging features enabled, or mis-configuring access controls.
 
 ## Monitoring and Incident Response
 Establishing comprehensive monitoring and incident response procedures is crucial to detecting and responding to security incidents. You can try implementing just one or all of these strategies:
 
-- **Logging and Auditing:** Enable logging and auditing features provided by Salesforce to track and record system events. Or use the built in Portal Health Check.This allows you to review and investigate any suspicious or unauthorized activities. Keep up with who is logging into your site and make sure to remove old profiles. 
-<!-- Link to Salesforce Help doc for tracking site logins. -->
+- **Logging and Auditing:** Enable logging and auditing features provided by Salesforce to track and record system events. Or use the built in [Portal Health Check](https://help.salesforce.com/s/articleView?id=sf.security_phc_overview.htm&type=5).This allows you to review and investigate any suspicious or unauthorized activities. Keep up with who is logging into your site and make sure to remove old profiles.
 
-- **Remove Ghost Sites:** A Salesforce ghost site is an inactive Experience Site with a custom domain that remains accessible after it's no longer in use. These sites, when not properly deactivated, can pull sensitive data from the Salesforce environment and can be exploited by malicious actors by altering HTTP headers. To address this threat, make sure to properly deactivate unused sites. 
-<!-- Link to Salesforce Help for deactivating sites. -->
+- **Remove Ghost Sites:** A Salesforce ghost site is an inactive Experience Site with a custom domain that remains accessible after it's no longer in use. These sites, when not properly deactivated, can pull sensitive data from the Salesforce environment and can be exploited by malicious actors by altering HTTP headers. To address this threat, make sure to properly [archive unused sites](https://help.salesforce.com/s/articleView?id=sf.networks_archive_sites_considerations.htm&type=5).
 
-<!-- Stock image of a team training -->
 ## User Training and Awareness
 In addition to technical security measures, user training and awareness play a vital role in ensuring the overall security of your Salesforce Experience Sites. While robust security measures can provide a strong foundation, it's equally important to educate your users about best practices and potential risks, such as:
 

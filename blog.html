@@ -39,9 +39,14 @@ permalink: /blog/
       width: 100%;
       height: 100%;
       object-fit: fill;
+    @media screen and (max-width: 720px) {
+      .feed .post-card {
+        grid-template-columns: 1fr;
+      }
+      .feed .post-card .card-featured-image {
+        object-fit: cover;
+      }
     }
-  
-  }
 </style>
 
 <div class="blog-home">

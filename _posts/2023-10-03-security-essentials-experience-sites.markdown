@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Five Essential Security Areas for Salesforce Experience Sites"
-date:   2023-09-11 14:12:14 -0400
+date:   2023-10-03 07:00:00 -0400
 author: Tamara Chance
 categories: experience-cloud
 image: assets/img/stockImages/security-lock-laptop.png

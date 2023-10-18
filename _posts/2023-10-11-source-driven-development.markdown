@@ -4,7 +4,7 @@ title:  "Delivering Value Through Source-Driven Development"
 date:   2023-10-18 05:00:00 -0400
 author: Tamara Chance
 categories: salesforce
-image: assets\img\stockImages\source-driven-development.png
+image: assets/img/stockImages/source-driven-development.png
 ---
 At Duelfer Solutions, we're proponents of the source-driven development model because we've seen first-hand the transformative
 power it brings to Salesforce development. In this post, we'll delve into the reasons why source-driven development is a game-changer for companies using Salesforce, and how it aligns perfectly with our mission to elevate the way organizations harness the capabilities of this powerful platform.

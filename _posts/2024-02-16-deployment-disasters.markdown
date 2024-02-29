@@ -13,7 +13,7 @@ Picture this...
 A team of Salesforce professionals have been hard at work building out a new workflow for a critical business process. The project involves integrations, Apex code, flows, new objects, fields, and pages—all meticulously crafted in a development org. The plan was to push these changes to another development org for testing, but there was a crucial misstep: *the wrong org was refreshed, erasing all the work done.*
 
 ![Facebook Clips](/assets/img/postImages/deploy-disaster-fb-clips.png){:style="width: 70%; display: block; margin: auto;"}
-## The Impact
+
 The consequences were immediate and severe. Hours of development work were lost, integrations were disrupted, and the testing timeline was thrown into disarray. The team faced delays, frustration, and pressure to quickly recover from the setback.
 ## How Source-Driven Development Could Have Saved The Day
 Enter the hero of our story, source-driven development—a modern approach to Salesforce development that could have prevented this deployment disaster. Unlike traditional methods that rely on manual packaging and deployment, source-driven development manages changes directly through source code. Some of the benefits, include:

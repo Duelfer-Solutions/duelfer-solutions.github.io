@@ -4,7 +4,7 @@ title: "AgentForce World Tour Atlanta: A Game-Changer in the Salesforce Ecosyste
 date: 2025-03-12 05:00:00 -0400
 author: Tamara Chance
 categories: salesforce agentforce AI
-image: assets\img\stockImages\agentforce-world-tour.png
+image: assets/img/stockImages/agentforce-world-tour.png
 ---
 For anyone in the Salesforce industry, AgentForce represents the biggest leap forward since the introduction of the Lightning Experience. With AI at its core, this innovation has the potential to not only propel Salesforce itself but also revolutionize its customers' operations.
 

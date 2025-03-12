@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "AgentForce World Tour Atlanta: A Game-Changer in the Salesforce Ecosystem"
-date: 2025-02-04 05:00:00 -0400
+date: 2025-03-12 05:00:00 -0400
 author: Tamara Chance
 categories: salesforce agentforce AI
 image: assets\img\stockImages\agentforce-world-tour.png

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Lessons Learned On the Road to Producing An AppExchange App"
-date: 2025-04-16 05:00:00 -0400
+date: 2025-04-30 08:00:00 -0400
 author: Tamara Chance
 categories: salesforce agentforce AI
 image: assets/img/stockImages/road-to-appExchange.svg
@@ -12,11 +12,11 @@ While this post won’t discuss the specifics of the app (that’ll come later),
 
 #### **Where It All Started**
 
-The original idea for our app didn’t come from a whiteboard or a team brainstorm—it came from a client. We needed to fulfill a specific feature request, but there wasn’t a standard Salesforce solution. So, we looked for an AppExchange solution, and found one that was *almost* right. It kind of did what we needed, but not quite.
+The idea for this app didn’t come from a whiteboard or team brainstorm – it came from the need to fulfill the requirements of our clients. We had seen similar requests from various Salesforce customers and orgs, and the out-of-the-box Salesforce features and similar AppExchange solutions were almost good enough, but just never quite right.
 
-In order to fulfill the exact requirements, we built something custom. But after working through our custom solution, we realized: this could help other orgs too. It wasn’t a clone of what was out there—it was a nuanced variation that solved a slightly different problem in a more configurable way. In other words, it filled an obvious gap left by the other solutions.
+In order to fulfill our client’s requirements, we built something custom given our previous experience with this problem. We realized that this solution was not unique to the client or their business but could be applied to nearly any organization using Service Cloud. 
 
-That was the moment the AppExchange seed was planted.
+So, we decided to take this simple, generalizable idea and develop it into a feature-rich solution that anybody could configure for their own org.
 
 #### **Lesson Learned #1:** _When You Don’t Know the Org Your App Will Live In, You Have to Bake in Flexibility, Documentation, and Assumption-Free Logic from the Very Beginning_
 
@@ -58,7 +58,7 @@ How I’m Preparing:
 - **Salesforce Code Analyzer in GitHub Actions** to catch things proactively. Plus, the Salesforce Code Analyzer documentation is required as part of the submission.
 - **Strict enforcement of CRUD/FLS and documented tests**
 - **ApexDoc Documentation annotations** added from the start to ensure the codebase is well documented.
-- **Thinking through the demo experience**, which will need to be clean and convincing
+- **Thinking through the demo experience**, which will need to be clean and convincing.
 
 I think this phase will be a bit like preparing for an audit. You know your app works—but then you have to prove that it behaves safely, securely, and predictably under any org configuration.
 

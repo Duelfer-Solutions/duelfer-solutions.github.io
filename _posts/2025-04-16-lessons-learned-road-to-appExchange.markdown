@@ -51,7 +51,7 @@ Some things stood out as needing to be more stringent because of the _unknown_ f
 
 Even though the app hasn’t been submitted for Security Review yet, it’s been on our mind since day one. And honestly, that mindset has helped shape the app for the better.
 
-In anticipation of Security Review, I added a GitHub Action to run Salesforce Code Analyzer on every PR. It was my first time configuring Actions and working with GitHub workflows like this—but I can already see myself using them more in the future.
+In anticipation of Security Review, I added a [GitHub Action to run Salesforce Code Analyzer](https://sfdxdeveloper.com/salesforce/cli/sf/code/analyzer/github/actions/2025/05/07/salesforce-code-analyzer.html) on every PR. It was my first time configuring Actions and working with GitHub workflows like this—but I can already see myself using them more in the future.
 
 How I’m Preparing:
 

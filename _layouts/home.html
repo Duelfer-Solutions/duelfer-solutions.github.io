@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+    {%- include head-home.html -%}
+
+    <body>
+        <main class="page-wrapper" aria-label="Content">
+            {{ content }}
+        </main>
+
+        {%- include footer.html -%}
+
+        <!-- Provides a nice scoll experience in the header -->
+        <script src="assets/js/vendor/jarallax.min.js"></script>
+        <!-- Allows swiping on widgets that are compressed on mobile and smaller screens -->
+        <script src="assets/js/vendor/swiper-bundle.min.js"></script>
+        <!-- Visual rendering for a group of images that can be opened in a modal window -->
+        <script src="assets/js/vendor/lightgallery.min.js"></script>
+        <!-- Helper for loading images -->
+        <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+        <!-- Horizontal off-screen rotation of items like certifications, brands, etc. -->
+        <script src="assets/js/vendor/shuffle.min.js"></script>
+        <!-- Main Silicon Bootstrap Theme Script -->
+        <script src="assets/js/theme.min.js"></script>
+    </body>
+</html>

@@ -1,149 +1,206 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+---
+layout: home
+title: Duelfer Solutions
+permalink: /
+---
+<!-- Navbar -->
+<!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page if desired -->
+<header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+  <div class="container px-3">
+    <a href="index.html" class="navbar-brand pe-3">
+      <img src="/assets/img/duelfer-solutions-logo.svg" style="height:45px;" alt="Duelfer Solutions">
+    </a>
+    <div id="navbarNav" class="offcanvas offcanvas-end">
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="/blog" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>     
+    </div>
+    <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="jarallax position-relative d-flex align-items-center min-vh-100 bg-light mb-5 py-lg-5 pt-5" style="background-image: url(assets/img/hero-bg.svg);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
+  <div class="container position-relative zindex-5 py-5">
+    <div class="row justify-content-md-start justify-content-center">
+      <div class="col-md-8 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+        <div class="mb-md-5 pb-xl-5 mb-4">
+
+          <!-- Text -->
+          <h1 class="display-2 mb-md-5 mb-3 pb-3">
+            Complex problems <span class="text-gradient-primary">Simple solutions</span>
+          </h1>
+          <div class="d-md-flex align-items-md-start">
+            <a href="mailto:jon@duelfersolutions.com" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Work with us</a>
+            <p class="d-lg-block d-none mb-0 ps-md-3">We're a dedicated team of technical architects and software developers with a focus on <span class="text-gradient-primary">Salesforce</span> - but no reason to stop there.</p>
+          </div>
+        </div>
         
-        <!-- SEO meta tags -->
-        <title>Duelfer Solutions</title>
-        <meta name="description" content="Duelfer Solutions - a dedicated team of technical architects and software developers with a focus on Salesforce.">
-        <meta name="keywords" content="salesforce, developers, administrators, architects, software, consulting">
-        <meta name="author" content="Duelfer Solutions">
-        
-        <!-- Vendor Styles -->
-        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-        <link rel="stylesheet" media="screen" href="assets/css/vendor/swiper-bundle.min.css">
-        <link rel="stylesheet" media="screen" href="assets/css/vendor/lightgallery-bundle.min.css">
-
-        <!-- Main Theme Styles + Bootstrap -->
-        <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
-        <link rel="icon" type="image/x-icon" href="favicon_code_transparent.ico">
-    </head>
-    <body>
-        <main class="page-wrapper">
-
-            <!-- Navbar -->
-            <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-            <header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
-              <div class="container px-3">
-                <a href="index.html" class="navbar-brand pe-3">
-                  <img src="/assets/img/duelfer-solutions-logo.svg" style="height:45px;" alt="Duelfer Solutions">
-                </a>
-                <div id="navbarNav" class="offcanvas offcanvas-end">
-                  <div class="offcanvas-header border-bottom">
-                    <h5 class="offcanvas-title">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                  </div>
-                  <div class="offcanvas-body">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                      <li class="nav-item">
-                        <a href="/blog" class="nav-link">Blog</a>
-                      </li>
-                    </ul>
-                  </div>     
-                </div>
-                <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
-              </div>
-            </header>
+        <!-- Team image -->
+        <!-- div class="col-sm-6 col-9 order-md-2 order-1">
+          <img src="/assets/img/team-image.svg" style="fill-opacity: 0.2;">
+        </div -->
+        <!-- Scroll down btn -->
+        <div class="d-inline-flex align-items-center justify-content-center justify-content-md-start position-relative">
+          <a href="#benefits" data-scroll data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3" aria-label="Scroll for more">
+            <i class="bx bx-chevron-down"></i>
+          </a>
+          <span class="fs-sm">Discover more</span>
+        </div>
       
+      </div>
       
-            <!-- Hero -->
-            <section class="jarallax position-relative d-flex align-items-center min-vh-100 bg-light mb-5 py-lg-5 pt-5" style="background-image: url(assets/img/hero-bg.svg);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
-              <div class="container position-relative zindex-5 py-5">
-                <div class="row justify-content-md-start justify-content-center">
-                  <div class="col-md-8 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
-                    <div class="mb-md-5 pb-xl-5 mb-4">
-      
-                      <!-- Text -->
-                      <!-- h1 class="display-2 mb-md-5 mb-3 pb-3">
-                        Take Control of <span class="text-gradient-primary">Salesforce</span>
-                      </h1 -->
-                      <h1 class="display-2 mb-md-5 mb-3 pb-3">
-                        Complex problems <span class="text-gradient-primary">Simple solutions</span>
-                      </h1>
-                      <div class="d-md-flex align-items-md-start">
-                        <a href="mailto:salesforce@duelfersolutions.com" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Work with us</a>
-                        <p class="d-lg-block d-none mb-0 ps-md-3">We're a dedicated team of technical architects and software developers with a focus on <span class="text-gradient-primary">Salesforce</span> - but no reason to stop there.</p>
-                      </div>
-                    </div>
-                    
-                    <!-- Team image -->
-                    <!-- div class="col-sm-6 col-9 order-md-2 order-1">
-                      <img src="/assets/img/team-image.svg" style="fill-opacity: 0.2;">
-                    </div -->
-                    <!-- Scroll down btn -->
-                    <div class="d-inline-flex align-items-center justify-content-center justify-content-md-start position-relative">
-                      <a href="#benefits" data-scroll data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3" aria-label="Scroll for more">
-                        <i class="bx bx-chevron-down"></i>
-                      </a>
-                      <span class="fs-sm">Discover more</span>
-                    </div>
-                  
-                  </div>
-                  
-                </div>
-              </div>
-            </section>
+    </div>
+  </div>
+</section>
 
-            <!-- Benefits (features) -->
-            <section class="container mb-5 pt-lg-5" id="benefits">
-              <div class="swiper pt-3" data-swiper-options='{
-                "slidesPerView": 1,
-                "pagination": {
-                  "el": ".swiper-pagination",
-                  "clickable": true
-                },
-                "breakpoints": {
-                  "500": {
-                    "slidesPerView": 2
-                  },
-                  "991": {
-                    "slidesPerView": 3
-                  }
-                }
-              }'>
-              <div class="swiper-wrapper">
-                <div class="swiper-slide border-end-lg px-2">
-                  <div class="text-center">
-                    <img src="assets/img/award.svg" width="48" alt="Graph" class="d-block mb-4 mx-auto">
-                    <h4 class="mb-2 pb-1">Multi-Cloud Expertise</h4>
-                    <p class="mx-auto" style="max-width: 336px;">Salesforce (Sales, Service, , Marketing, Net Zero, Nonprofit), Heroku, AWS, Firebase, Slack and <span class="text-gradient-primary">20 Certifications</span> to prove it.</p>
-                  </div>
-                </div>
-                <div class="swiper-slide border-end-lg px-2">
-                  <div class="text-center">
-                    <img src="assets/img/idea.svg" width="48" alt="Source" class="d-block mb-4 mx-auto">
-                    <h4 class="mb-2 pb-1">Source-Driven Development</h4>
-                    <p class="mx-auto" style="max-width: 336px;">Git repositories, command-line deployments, CI/CD pipelines. Whether it's admin changes or code, we build your solution the right way.</p>
-                  </div>
-                </div>
-                <div class="swiper-slide px-2">
-                  <div class="text-center">
-                    <img src="assets/img/team.svg" width="48" alt="Team icon" class="d-block mb-4 mx-auto">
-                    <h4 class="mb-2 pb-1">Platform Integrations</h4>
-                    <p class="mx-auto" style="max-width: 336px;">Smart, efficient, and scalable integrations to make sure Salesforce is your source-of-truth, or we get your data where it needs to be.</p>
-                  </div>
-                </div>
-              </div>
+<!-- Benefits (features) -->
+<section class="container mb-5 pt-lg-5" id="benefits">
+  <div class="swiper pt-3" data-swiper-options='{
+    "slidesPerView": 1,
+    "pagination": {
+      "el": ".swiper-pagination",
+      "clickable": true
+    },
+    "breakpoints": {
+      "500": {
+        "slidesPerView": 2
+      },
+      "991": {
+        "slidesPerView": 3
+      }
+    }
+  }'>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide border-end-lg px-2">
+      <div class="text-center">
+        <img src="assets/img/award.svg" width="48" alt="Graph" class="d-block mb-4 mx-auto">
+        <h4 class="mb-2 pb-1">Multi-Cloud Expertise</h4>
+        <p class="mx-auto" style="max-width: 336px;">Salesforce (Sales, Service, , Marketing, Net Zero, Nonprofit), Heroku, AWS, Firebase, Slack and <span class="text-gradient-primary">20 Certifications</span> to prove it.</p>
+      </div>
+    </div>
+    <div class="swiper-slide border-end-lg px-2">
+      <div class="text-center">
+        <img src="assets/img/idea.svg" width="48" alt="Source" class="d-block mb-4 mx-auto">
+        <h4 class="mb-2 pb-1">Source-Driven Development</h4>
+        <p class="mx-auto" style="max-width: 336px;">Git repositories, command-line deployments, CI/CD pipelines. Whether it's admin changes or code, we build your solution the right way.</p>
+      </div>
+    </div>
+    <div class="swiper-slide px-2">
+      <div class="text-center">
+        <img src="assets/img/team.svg" width="48" alt="Team icon" class="d-block mb-4 mx-auto">
+        <h4 class="mb-2 pb-1">Platform Integrations</h4>
+        <p class="mx-auto" style="max-width: 336px;">Smart, efficient, and scalable integrations to make sure Salesforce is your source-of-truth, or we get your data where it needs to be.</p>
+      </div>
+    </div>
+  </div>
 
-              <!-- Pagination (bullets) -->
-              <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+  <!-- Pagination (bullets) -->
+  <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+</div>
+</section>
+
+<!-- Blog + Contact cta -->
+<div class="bg-secondary mb-5 pt-5">
+
+  <!-- Blog -->
+  <section class="container mb-5 py-lg-5">
+    <h2 class="h1 mb-4 pb-3 text-center">Latest From Our Blog</h2>
+    <div class="row">
+      <div class="col-lg-5 col-12 mb-lg-0 mb-4">
+
+        <!-- Article 1 -->
+        {%- for post in site.posts offset: 0 limit: 1 -%}
+        <article class="card h-100 border-0 shadow-sm">
+          <div class="position-relative">
+            <a href="{{ post.url | relative_url }}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+            <img src="{{ post.image | relative_url }}" class="card-img-top" alt="Image">
+          </div>
+          <div class="card-body pb-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="badge fs-sm text-nav bg-secondary text-decoration-none">{{ post.tag | escape }}</div>
+              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+              <span class="fs-sm text-muted">{{ post.date | date: date_format }}</span>
             </div>
-          </section>
-        </main>
-        <!-- script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script -->
-        
-        <!-- Vendor Scripts -->
-        <script src="assets/js/vendor/jarallax.min.js"></script>
-        <script src="assets/js/vendor/swiper-bundle.min.js"></script>
-        <script src="assets/js/vendor/lightgallery.min.js"></script>
-        <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
-        <script src="assets/js/vendor/shuffle.min.js"></script>
+            <h3 class="h5 mb-0">
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h3>
+          </div>
+          <div class="card-footer py-4">
+            <div class="d-inline-flex align-items-center position-relative me-3">
+              <img src="assets/img/tamara-profile.jpeg" class="rounded-circle me-3" width="48" alt="Tamara">
+              <div>
+                <div class="nav-link p-0 fw-bold text-decoration-none stretched-link">Tamara Chance</div>
+                <span class="fs-sm text-muted">Software Developer</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        {%- endfor -%}
+      </div>
+      <div class="col">
 
-        <!-- Main Theme Script -->
-        <script src="assets/js/theme.min.js"></script>
-    </body>
-</html>
+        <!-- Article 2 & 3 -->
+        {%- for post in site.posts offset: 1 limit: 2 -%}
+        <article class="card border-0 shadow-sm overflow-hidden mb-4">
+          <div class="row g-0">
+            <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url({{ post.snippet | relative_url }}); min-height: 15rem;">
+              <a href="{{ post.url | relative_url }}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+            </div>
+            <div class="col-sm-7">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="badge fs-sm text-nav bg-secondary text-decoration-none">{{ post.tag | escape }}</div>
+                  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                  <span class="fs-sm text-muted border-start ps-3 ms-3">{{ post.date | date: date_format }}</span>
+                </div>
+                <h3 class="h5">
+                  <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </h3>
+                <hr class="my-4">
+                <div class="d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-between">
+                  <div class="d-flex align-items-center position-relative me-3">
+                    <img src="{{ post.authorImage | escape }}" class="rounded-circle me-3" width="48" alt="Avatar">
+                    <div>
+                      <div class="nav-link p-0 fw-bold text-decoration-none stretched-link">{{ post.author | escape }}</div>
+                      <span class="fs-sm text-muted">{{ post.authorTitle | escape }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        {%- endfor -%}
+      </div>
+      <div class="col-12 mt-4 pt-lg-4 pt-3 text-center">
+        <a href="/blog" class="btn btn-lg btn-outline-primary w-sm-auto w-100">More blog posts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="container pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px);">
+    <div class="card border-0 bg-gradient-primary">
+      <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(assets/img/contact-bg.png);">
+        <div class="py-md-5 py-4 text-center">
+          <h3 class="h4 fw-normal text-light opacity-75">Want to work with us? Let's talk</h3>
+          <a href="mailto:jon@duelfersolutions.com" class="display-6 text-light">jon@duelfersolutions.com</a>
+          <div class="pt-md-5 pt-4 pb-md-2">
+            <a href="mailto:jon@duelfersolutions.com" class="btn btn-lg btn-light">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

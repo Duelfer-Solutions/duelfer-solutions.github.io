@@ -1,175 +1,470 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link href="/assets/css/style.css" rel="stylesheet"/>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
-        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
-        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
-        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
-        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
-        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
-        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
-        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-        <link rel="manifest" href="/manifest.json">
-        <meta name="msapplication-TileColor" content="#ffffff">
-        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-        <meta name="theme-color" content="#ffffff">
-        <title>Duelfer Solutions, L.L.C.</title>
-    </head>
-    <body>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
-                <img src="/assets/img/logo.png" alt="" height="35">
-              </a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent" style="flex-grow: 0;">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 justify-content-end"> 
-                    <li><a class="nav-link me-3" href="#about-us" style="text-decoration: none; color: #fff;">About Us</a></li>
-                    <li><a class="nav-link me-3" href="#services" style="text-decoration: none; color: #fff;">Our Services</a></li>
-                    <li><a class="nav-link me-3" href="#team" style="text-decoration: none; color: #fff;">Our Team</a></li>
-                    <li><a class="nav-link me-3" href="/blog" style="text-decoration: none; color: #fff;">Blog</a></li>
-                </ul>
+---
+layout: home
+title: Duelfer Solutions
+permalink: /
+---
+<!-- Navbar -->
+<!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page if desired -->
+<header class="header navbar navbar-expand-lg position-absolute navbar-sticky">
+  <div class="container px-3">
+    <a href="index.html" class="navbar-brand pe-3">
+      <img src="/assets/img/duelfer-solutions-logo.svg" style="height:45px;" alt="Duelfer Solutions">
+    </a>
+    <div id="navbarNav" class="offcanvas offcanvas-end">
+      <div class="offcanvas-header border-bottom">
+        <h5 class="offcanvas-title">Menu</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a href="/blog" class="nav-link">Blog</a>
+          </li>
+        </ul>
+      </div>     
+    </div>
+    <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</header>
+
+<!-- Hero -->
+<section class="jarallax position-relative d-flex align-items-center min-vh-100 bg-light mb-5 py-lg-5 pt-5" style="background-image: url(assets/img/hero-bg.svg);" data-jarallax data-img-position="0% 100%" data-speed="0.5">
+  <div class="container position-relative zindex-5 py-5">
+    <div class="row justify-content-md-start justify-content-center">
+      <div class="col-md-8 col-sm-8 order-md-1 order-2 d-flex flex-column justify-content-between mt-4 pt-2 text-md-start text-center">
+        <div class="mb-md-5 pb-xl-5 mb-4">
+
+          <!-- Text -->
+          <h1 class="display-2 mb-md-5 mb-3 pb-3">
+            Complex problems <span class="text-gradient-primary">Simple solutions</span>
+          </h1>
+          <div class="d-md-flex align-items-md-start">
+            <a href="mailto:info@duelfersolutions.com" class="btn btn-lg btn-primary flex-shrink-0 me-md-4 mb-md-0 mb-sm-4 mb-3">Work with us</a>
+            <p class="d-lg-block d-none mb-0 ps-md-3">We're a dedicated team of technical architects and software developers with a focus on <span class="text-gradient-primary">Salesforce</span> - but no reason to stop there.</p>
+          </div>
+        </div>
+        
+        <!-- Scroll down btn -->
+        <div class="d-inline-flex align-items-center justify-content-center justify-content-md-start position-relative">
+          <a href="#benefits" data-scroll data-scroll-offset="100" class="btn btn-video btn-icon rounded-circle shadow-sm flex-shrink-0 stretched-link me-3" aria-label="Scroll for more">
+            <i class="bx bx-chevron-down"></i>
+          </a>
+          <span class="fs-sm">Discover more</span>
+        </div>
+      
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+<!-- Benefits (features) -->
+<section class="container mb-5 pt-lg-5" id="benefits">
+  <div class="swiper pt-3" data-swiper-options='{
+    "slidesPerView": 1,
+    "pagination": {
+      "el": ".swiper-pagination",
+      "clickable": true
+    },
+    "breakpoints": {
+      "500": {
+        "slidesPerView": 2
+      },
+      "991": {
+        "slidesPerView": 3
+      }
+    }
+  }'>
+  <div class="swiper-wrapper">
+    <div class="swiper-slide border-end-lg px-2">
+      <div class="text-center">
+        <img src="assets/img/award.svg" width="48" alt="Graph" class="d-block mb-4 mx-auto">
+        <h4 class="mb-2 pb-1">Multi-Cloud Expertise</h4>
+        <p class="mx-auto" style="max-width: 336px;">Salesforce (Sales, Service, Marketing, Net Zero, Nonprofit), Heroku, AWS, Firebase, Slack and <span class="text-gradient-primary">20 Certifications</span> to prove it.</p>
+      </div>
+    </div>
+    <div class="swiper-slide border-end-lg px-2">
+      <div class="text-center">
+        <img src="assets/img/idea.svg" width="48" alt="Source" class="d-block mb-4 mx-auto">
+        <h4 class="mb-2 pb-1">Source-Driven Development</h4>
+        <p class="mx-auto" style="max-width: 336px;">Git repositories, command-line deployments, CI/CD pipelines. Whether it's admin changes or code, we build your solution the right way.</p>
+      </div>
+    </div>
+    <div class="swiper-slide px-2">
+      <div class="text-center">
+        <img src="assets/img/team.svg" width="48" alt="Team icon" class="d-block mb-4 mx-auto">
+        <h4 class="mb-2 pb-1">Platform Integrations</h4>
+        <p class="mx-auto" style="max-width: 336px;">Smart, efficient, and scalable integrations to make sure Salesforce is your source-of-truth, or we get your data where it needs to be.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Pagination (bullets) -->
+  <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4"></div>
+</div>
+</section>
+
+<!-- Services -->
+<section class="container mb-2 pb-2 pb-md-4 pb-lg-5">
+  <div class="card border-0 bg-secondary p-md-5 px-sm-2 pt-4 pb-3">
+    <div class="card-body mx-auto" style="max-width: 860px;">
+      <h2 class="h1 mb-4 text-center">What we do</h2>
+      <p class="mb-4 pb-3 fs-lg text-center text-muted">Our services typically fall into the following categories, but at the end of the day, our goal is to provide any missing pieces to drive your organization to success.</p>
+
+      <!-- Accordion: Alternative style -->
+      <div class="accordion" id="accordion-services">
+
+        <!-- Item -->
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h3 class="accordion-header" id="heading-1">
+            <button class="accordion-button fs-xl shadow-none rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">Salesforce Development</button>
+          </h3>
+          <div class="accordion-collapse collapse show" id="collapse-1" aria-labelledby="heading-1" data-bs-parent="#accordion-services">
+            <div class="accordion-body pt-0">
+              <div class="d-flex flex-md-row flex-column align-items-md-center">
+                <img src="assets/img/salesforce-partner-square-solid.png" width="100" alt="Salesforce Partner" class="me-md-4 mb-md-0 mb-3">
+                <div class="ps-md-3">
+                  <p class="mb-0">Our <span class="text-gradient-primary">bread and butter</span>. With over 15 years in cumulative Salesforce experience, we know how to develop, integrate, optimize, refactor, debug, fix or really anything else that your Salesforce org might be needing.</p>
+                </div>
               </div>
             </div>
-        </nav>
-        <header class="masthead bg-light">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6" style="text-align:right;">
-                        <h1 class="mb-1">Complex Problems</h1>
-                        <h3 class="mb-3">Simple Solutions</h3>
-                        <a class="btn btn-dark" href="mailto:jon@duelfersolutions.com">Talk to Our Experts</a>
-                    </div>
-                    <div class="col-lg-6 text-center">
-                        <img src="/assets/img/little-things-me.png" height="250px"/>
-                    </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h3 class="accordion-header" id="heading-2">
+            <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="true" aria-controls="collapse-2">Salesforce Architecture</button>
+          </h3>
+          <div class="accordion-collapse collapse" id="collapse-2" aria-labelledby="heading-2" data-bs-parent="#accordion-services">
+            <div class="accordion-body pt-0">
+              <div class="d-flex flex-md-row flex-column align-items-md-center">
+                <img src="assets/img/salesforce-partner-square.png" width="100" alt="Salesforce Partner" class="me-md-4 mb-md-0 mb-3">
+                <div class="ps-md-3">
+                  <p class="mb-0">We know the Salesforce ecosystem <span class="text-gradient-primary">inside and out</span> and create comprehensive technical, system, and product designs for implementation. We provide this either as a prerequisite to our own development or can work closely with your internal or external development teams to deliver the solution.</p>
                 </div>
+              </div>
             </div>
-        </header>
-        <section id="about-us" class="content-section-after-skew bg-white">
-            <div class="container text-center">
-                <div class="row">
-                    <div class="col-lg-4">
-                        <img src="/assets/img/pebble-people.png" height="150px"/>
-                    </div>
-                    <div class="col-lg-8 mx-auto">
-                        <h2>Agility. Integrity. Excellence.</h2>
-                        <p class="lead mb-3">With over 10 years of experience in the Salesforce ecosystem, our mission is to be a trusted partner on our clients’ journey to Salesforce success. Our team of experts brings a level of excellence that you can trust.</p> 
-                        <p class="lead mb-3">We’re committed to delivering top-quality services, innovative solutions, and exceptional customer satisfaction. We'll work collaboratively with you, utilizing agile methodologies to adapt quickly to your evolving business needs and provide flexible solutions tailored to your unique requirements.</p>
-                    </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h3 class="accordion-header" id="heading-3">
+            <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="true" aria-controls="collapse-3">Full-Stack Development</button>
+          </h3>
+          <div class="accordion-collapse collapse" id="collapse-3" aria-labelledby="heading-3" data-bs-parent="#accordion-services">
+            <div class="accordion-body pt-0">
+              <div class="d-flex flex-md-row flex-column align-items-md-center">
+                <i class="bx bx-code-alt bx-lg ms-4 me-md-4 mb-md-0 mb-3"></i>
+                <div class="ps-md-4">
+                  <p class="mb-0">If your software ecosystem extends beyond Salesforce, we have extensive experience working within Cloud Platforms such as <span class="text-gradient-primary">Heroku, AWS, and Google Cloud</span> alongside a number of languages and frameworks. And if we don't have experience yet in your exact setup, we fancy ourselves to be quick learners.</p>
                 </div>
+              </div>
             </div>
-        </section>
-        <section id="services" class="content-section bg-light">
-            <div class="container">
-                <div class="row pt-5">
-                    <div class="col-lg-4">
-                        <img class="responsive" src="/assets/img/humans-graph.png" alt="Salesforce"> 
-                        <div class="row service-header">
-                            <h3 class="pt-1">Multi-Cloud Salesforce Implementations</h3>
-                        </div>
-                        <div class="row service-text px-3">
-                            <p>We have successfully worked with a wide range of clouds, including Sales Cloud, Service Cloud, Net Zero Cloud, NPSP (Nonprofit Success Pack), and Marketing Cloud. Our experience spans across these clouds, enabling us to deliver comprehensive solutions that address your sales, service, sustainability, nonprofit, and marketing needs.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <img class="responsive" src="/assets/img/pebble-people-ui.png" alt="Salesforce">          
-                        <div class="row service-header">
-                            <h3 class="pt-1">Source-Driven Solutions</h3>
-                        </div>
-                        <div class="row service-text px-3">
-                            <p>With our source-driven approach, you can have peace of mind knowing that your Salesforce org is protected, and changes can be implemented smoothly while maintaining the highest level of data integrity and governance. Our experienced team utilizes version control systems and best practices to maintain a comprehensive history of changes, allowing for efficient collaboration, seamless code management, and streamlined deployments.</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <img class="responsive" src="/assets/img/humans-ux.png" alt="Salesforce">
-                        <div class="row service-header">
-                            <h3 class="pt-1">Customized Platform Integrations</h3>
-                        </div>
-                        <div class="row service-text px-3">
-                            <p>From Financial Management, Flight Scheduling, and IoT to a list of other software systems in Java, Python, JavaScript, and Clojure, we are comfortable working across different stacks and cloud providers. Our experience with a range of tecnologies ensures you get the most optimized solution.</p>
-                        </div>
-                    </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h3 class="accordion-header" id="heading-5">
+            <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="true" aria-controls="collapse-5">Technical Consulting</button>
+          </h3>
+          <div class="accordion-collapse collapse" id="collapse-5" aria-labelledby="heading-5" data-bs-parent="#accordion-services">
+            <div class="accordion-body pt-0">
+              <div class="d-flex flex-md-row flex-column align-items-md-center">
+                <img src="assets/img/digital.svg" width="150" alt="Application Development" class="me-md-4 mb-md-0 mb-3">
+                <div class="ps-md-3">
+                  <p class="mb-0">Not sure what's needed just yet or how to wire it all together? We work closely with you and your team to take a <span class="text-gradient-primary">spark of an idea and turn it into an efficient and scalable system</span>.</p>
                 </div>
+              </div>
             </div>
-        </section>
-        <section id="team" class="content-section bg-white">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6" style="width:100%; text-align:center">
-                        <h1>Meet Our Team</h1>
-                    </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h3 class="accordion-header" id="heading-6">
+            <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-6" aria-expanded="true" aria-controls="collapse-6">Strategic Consulting</button>
+          </h3>
+          <div class="accordion-collapse collapse" id="collapse-6" aria-labelledby="heading-6" data-bs-parent="#accordion-services">
+            <div class="accordion-body pt-0">
+              <div class="d-flex flex-md-row flex-column align-items-md-center">
+                <img src="assets/img/chart.svg" width="300" alt="Strategy" class="me-md-4 mb-md-0 mb-3">
+                <div class="ps-md-3">
+                  <p class="mb-0">We've design and managed <span class="text-gradient-primary">software budgets of up to $1.4M</span>. We've helped companies both migrate into Salesforce to achieve a higher ROI and out of Salesforce to focus on custom application development. We have hands on experience with a wide range of CRMs, Cloud Providers, ERPs, and other cloud-based, third-party solutions that can help you company get the strategic edge it needs.</p>
                 </div>
-                <div class="row" style="justify-content: space-evenly;">
-                    <div class="mt-5 col-lg-6">
-                        <div class="card" style="flex-direction:row; flex-wrap:wrap; border:0;">
-                            <div class="col-md-5">
-                                <img class="img-fluid rounded-circle" src="/assets/img/jon-profile.jpg" alt="">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title">Jonathan Duelfer</h5>
-                                    <h6 class="card-title">CEO, Application Architect</h6>
-                                    <p class="card-text">With nearly a decade of experience spanning various industries such as private aviation, fin-tech, and the energy sector and over 7 years of hands-on experience, ranging from building Salesforce Orgs from scratch to collaborating within large development teams, he has successfully tackled projects of all sizes and complexities. Whether it's developing independent tools or seamlessly integrating with existing development teams, he brings a wealth of consulting expertise.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-5 col-lg-6">
-                        <div class="card" style="flex-direction:row; flex-wrap:wrap; border:0;">
-                            <div class="col-md-5">
-                                <img class="img-fluid rounded-circle" src="/assets/img/tamara-profile.jpeg" alt="">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title">Tamara Chance</h5>
-                                    <h6 class="card-title">Software Developer</h6>
-                                    <p class="card-text">As a 8x certified Salesforce developer and full-stack web developer, she has a diverse range of experience across multiple Salesforce domains. Her broad skillset enables her to bridge the gap between Salesforce customization and robust web development. She has a passion for continuous-learning and delivering cutting-edge solutions to drive business success while leveraging the full capabilities of the Salesforce platform.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="mt-5 col-lg-6">
-                        <div class="card" style="flex-direction:row; flex-wrap:wrap; border:0;">
-                            <div class="col-md-5">
-                                <img class="img-fluid rounded-circle" src="/assets/img/caitlin-profile.jpg" alt="">
-                            </div>
-                            <div class="col-md-7">
-                                <div class="card-body">
-                                    <h5 class="card-title">Caitlin Sullivan</h5>
-                                    <h6 class="card-title">Software Developer</h6>
-                                    <p class="card-text">With a Masters in Mathematics, Caitlin brings a unique analytical perspective to problem-solving in software development. She is a recently certified Salesforce Platform Developer with three years of CRM experience and a passion for tackling new challenges with creative solutions.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+              </div>
             </div>
-        </section>
-        <section class="footer bg-dark" style="color: white;">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-6 col-md-12">
-                        <p>&#169; 2023 Duelfer Solutions, L.L.C. All Rights Reserved.</p>
-                    </div>
-                    <div class="col-lg-6 col-md-12 footer-email">
-                        <p>jon@duelfersolutions.com</p>
-                    </div>
+          </div>
+        </div>
+
+        <!-- Item -->
+        <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
+          <h3 class="accordion-header" id="heading-7">
+            <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-7" aria-expanded="true" aria-controls="collapse-7">Software Diligence</button>
+          </h3>
+          <div class="accordion-collapse collapse" id="collapse-7" aria-labelledby="heading-7" data-bs-parent="#accordion-services">
+            <div class="accordion-body pt-0">
+              <div class="d-flex flex-md-row flex-column align-items-md-center">
+                <img src="assets/img/insurance.svg" width="200" alt="Digital Advertising" class="me-md-4 mb-md-0 mb-3">
+                <div class="ps-md-3">
+                  <p class="mb-0">Aquiring a company or a codebase and need to do due diligence on the technical assets? We work closely with you and your team to understand your organization's expectations and ensure all potential assets meet your requirements.</p>
                 </div>
+              </div>
             </div>
-        </section>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-    </body>
-</html>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Team -->
+<section class="container py-2 my-md-2 my-lg-3">
+  <h2 class="h1 text-center pt-1 pb-3 mb-3 mb-lg-4">Our Team</h2>
+  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-2 row-cols-lg-3 g-3">
+
+    <!-- Item -->
+    <div class="col">
+      <div class="card card-hover border-0 bg-transparent">
+        <div class="position-relative">
+          <img src="assets/img/jon-profile.jpg" class="rounded-3" alt="Jon Duelfer">
+          <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25 rounded-3"></span>
+            <div class="position-relative d-flex zindex-2">
+              <a href="https://www.linkedin.com/in/jonathan-duelfer-53749bba/" target="_blank" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white" aria-label="LinkedIn">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body text-center p-3">
+          <h3 class="fs-lg fw-semibold pt-1 mb-2">Jon Duelfer</h3>
+          <p class="fs-sm mb-0">CEO &amp; Application Architect</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="col">
+      <div class="card card-hover border-0 bg-transparent">
+        <div class="position-relative">
+          <img src="assets/img/tamara-profile.jpeg" class="rounded-3" alt="Tamara Chance">
+          <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25 rounded-3"></span>
+            <div class="position-relative d-flex zindex-2">
+              <a href="https://www.linkedin.com/in/tamarachance-salesforce/" target="_blank" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white" aria-label="LinkedIn">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body text-center p-3">
+          <h3 class="fs-lg fw-semibold pt-1 mb-2">Tamara Chance</h3>
+          <p class="fs-sm mb-0">Software Developer</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item -->
+    <div class="col">
+      <div class="card card-hover border-0 bg-transparent">
+        <div class="position-relative">
+          <img src="assets/img/caitlin-profile.jpg" class="rounded-3" alt="Caitlin Sullivan">
+          <div class="card-img-overlay d-flex flex-column align-items-center justify-content-center rounded-3">
+            <span class="position-absolute top-0 start-0 w-100 h-100 bg-dark opacity-25 rounded-3"></span>
+            <div class="position-relative d-flex zindex-2">
+              <a href="https://www.linkedin.com/in/mary-caitlin-harrison/" target="_blank" class="btn btn-icon btn-secondary btn-linkedin btn-sm bg-white" aria-label="LinkedIn">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="card-body text-center p-3">
+          <h3 class="fs-lg fw-semibold pt-1 mb-2">Caitlin Sullivan</h3>
+          <p class="fs-sm mb-0">Software Developer</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certs (Carousel) -->
+<section class="container pb-4 pb-lg-5 mb-3">
+  <div class="swiper mx-n2" data-swiper-options='{
+    "slidesPerView": 2,
+    "autoplay": {
+      "delay": 3000
+    },
+    "navigation": {
+      "prevEl": "#prev-brand",
+      "nextEl": "#next-brand"
+    },
+    "loop": true,
+    "pagination": {
+      "el": ".swiper-pagination",
+      "clickable": true
+    },
+    "breakpoints": {
+      "500": {
+        "slidesPerView": 3,
+        "spaceBetween": 8
+      },
+      "650": {
+        "slidesPerView": 3,
+        "spaceBetween": 8
+      },
+      "900": {
+        "slidesPerView": 4,
+        "spaceBetween": 8
+      },
+      "1100": {
+        "slidesPerView": 5,
+        "spaceBetween": 8
+      }
+    }
+  }'>
+    <div class="swiper-wrapper">
+      <div class="swiper-slide py-3">
+        <div class="card card-body card-hover px-2 mx-2">
+          <img src="assets/img/certs/application-architect.png" class="d-block mx-auto my-2" width="125" alt="application architect">
+        </div>
+      </div>
+      <div class="swiper-slide py-3">
+        <div class="card card-body card-hover px-2 mx-2">
+          <img src="assets/img/certs/data-architect.png" class="d-block mx-auto my-2" width="125" alt="data architect">
+        </div>
+      </div>
+      <div class="swiper-slide py-3">
+        <div class="card card-body card-hover px-2 mx-2">
+          <img src="assets/img/certs/developer-2.png" class="d-block mx-auto my-2" width="125" alt="developer 2">
+        </div>
+      </div>
+      <div class="swiper-slide py-3">
+        <div class="card card-body card-hover px-2 mx-2">
+          <img src="assets/img/certs/developer-1.png" class="d-block mx-auto my-2" width="125" alt="developer 1">
+        </div>
+      </div>
+      <div class="swiper-slide py-3">
+        <div class="card card-body card-hover px-2 mx-2">
+          <img src="assets/img/certs/sales-cloud-consultant.png" class="d-block mx-auto my-2" width="125" alt="sales cloud consultant">
+        </div>
+      </div>
+      <div class="swiper-slide py-3">
+        <div class="card card-body card-hover px-2 mx-2">
+          <img src="assets/img/certs/admin.png" class="d-block mx-auto my-2" width="125" alt="admin">
+        </div>
+      </div>
+      <div class="swiper-slide py-3">
+        <div class="card card-body card-hover px-2 mx-2">
+          <img src="assets/img/certs/app-builder.png" class="d-block mx-auto my-2" width="125" alt="app builder">
+        </div>
+      </div>
+      <div class="swiper-slide py-3">
+        <div class="card card-body card-hover px-2 mx-2">
+          <img src="assets/img/certs/visibility-architect.png" class="d-block mx-auto my-2" width="125" alt="visibility architect">
+        </div>
+      </div>
+
+    <!-- Pagination (bullets) -->
+    <div class="swiper-pagination position-relative pt-3 mt-4 d-md-none d-flex"></div>
+  </div>
+</section>
+
+<!-- Blog + Contact cta -->
+<div class="bg-secondary mb-5 pt-5">
+
+  <!-- Blog -->
+  <section class="container mb-5 py-lg-5">
+    <h2 class="h1 mb-4 pb-3 text-center">Latest From Our Blog</h2>
+    <div class="row">
+      <div class="col-lg-5 col-12 mb-lg-0 mb-4">
+
+        <!-- Article 1 -->
+        {%- for post in site.posts offset: 0 limit: 1 -%}
+        <article class="card h-100 border-0 shadow-sm">
+          <div class="position-relative">
+            <a href="{{ post.url | relative_url }}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+            <img src="{{ post.image | relative_url }}" class="card-img-top" alt="Image">
+          </div>
+          <div class="card-body pb-4">
+            <div class="d-flex align-items-center justify-content-between mb-3">
+              <div class="badge fs-sm text-nav bg-secondary text-decoration-none">{{ post.tag | escape }}</div>
+              {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+              <span class="fs-sm text-muted">{{ post.date | date: date_format }}</span>
+            </div>
+            <h3 class="h5 mb-0">
+              <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h3>
+          </div>
+          <div class="card-footer py-4">
+            <div class="d-inline-flex align-items-center position-relative me-3">
+              <img src="assets/img/tamara-profile.jpeg" class="rounded-circle me-3" width="48" alt="Tamara">
+              <div>
+                <div class="nav-link p-0 fw-bold text-decoration-none stretched-link">Tamara Chance</div>
+                <span class="fs-sm text-muted">Software Developer</span>
+              </div>
+            </div>
+          </div>
+        </article>
+        {%- endfor -%}
+      </div>
+      <div class="col">
+
+        <!-- Article 2 & 3 -->
+        {%- for post in site.posts offset: 1 limit: 2 -%}
+        <article class="card border-0 shadow-sm overflow-hidden mb-4">
+          <div class="row g-0">
+            <div class="col-sm-5 position-relative bg-position-center bg-repeat-0 bg-size-cover" style="background-image: url({{ post.snippet | relative_url }}); min-height: 15rem;">
+              <a href="{{ post.url | relative_url }}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+            </div>
+            <div class="col-sm-7">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-3">
+                  <div class="badge fs-sm text-nav bg-secondary text-decoration-none">{{ post.tag | escape }}</div>
+                  {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+                  <span class="fs-sm text-muted border-start ps-3 ms-3">{{ post.date | date: date_format }}</span>
+                </div>
+                <h3 class="h5">
+                  <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+                </h3>
+                <hr class="my-4">
+                <div class="d-flex flex-sm-nowrap flex-wrap align-items-center justify-content-between">
+                  <div class="d-flex align-items-center position-relative me-3">
+                    <img src="{{ post.authorImage | escape }}" class="rounded-circle me-3" width="48" alt="Avatar">
+                    <div>
+                      <div class="nav-link p-0 fw-bold text-decoration-none stretched-link">{{ post.author | escape }}</div>
+                      <span class="fs-sm text-muted">{{ post.authorTitle | escape }}</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </article>
+        {%- endfor -%}
+      </div>
+      <div class="col-12 mt-4 pt-lg-4 pt-3 text-center">
+        <a href="/blog" class="btn btn-lg btn-outline-primary w-sm-auto w-100">More blog posts</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact CTA -->
+  <section class="container pt-3 pb-4 pb-md-5" style="margin-top: -156px; margin-bottom: 120px; transform: translateY(156px);">
+    <div class="card border-0 bg-gradient-primary">
+      <div class="card-body p-md-5 p-4 bg-size-cover" style="background-image: url(assets/img/contact-bg.png);">
+        <div class="py-md-5 py-4 text-center">
+          <h3 class="h4 fw-normal text-light opacity-75">Want to work with us? Let's talk</h3>
+          <a href="mailto:info@duelfersolutions.com" class="display-6 text-light">info@duelfersolutions.com</a>
+          <div class="pt-md-5 pt-4 pb-md-2">
+            <a href="mailto:info@duelfersolutions.com" class="btn btn-lg btn-light">Contact us</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

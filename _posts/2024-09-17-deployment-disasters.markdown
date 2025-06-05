@@ -3,8 +3,12 @@ layout: post
 title:  "Avoiding Deployment Disasters: The Power of Source-Driven Development"
 date:   2024-09-17 07:00:00 -0400
 author: Tamara Chance
+authorTitle: Software Developer
+authorImage: assets/img/tamara-profile.jpeg
 categories: salesforce
-image: assets/img/stockImages/salesforce-deploy-disaster.png
+image: assets/img/deployment-disasters.png
+snippet: assets/img/deployment-disasters-snippet.png
+tag: Salesforce Development
 ---
 Mistakes can happen quickly in Salesforce development, often with significant consequences. In this blog post, we'll explore a real-world scenario where a deployment disaster occurred and discuss how a source-driven development approach could have prevented it.
 ## The Scenario

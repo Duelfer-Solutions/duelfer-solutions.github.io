@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+
+    {%- include head-landing.html -%}
+
+    <body>
+        <main class="page-wrapper" aria-label="Content">
+            {{ content }}
+        </main>
+
+        {%- include footer.html -%}
+
+        <!-- Helper for loading images -->
+        <script src="assets/js/vendor/imagesloaded.pkgd.min.js"></script>
+        <!-- Main Silicon Bootstrap Theme Script -->
+        <script src="assets/js/theme.min.js"></script>
+
+        {%- if jekyll.environment == 'production' -%}
+            {%- include cloudflare-analytics.html -%}
+        {%- endif -%}
+    </body>
+</html>

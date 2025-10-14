@@ -1,47 +1,74 @@
 ---
-layout: default
+layout: landing
 title: Blog Home
 permalink: /blog/
 ---
-<head>
-  <link href="/assets/css/style.css" rel="stylesheet"/>
-</head>
 
-<div class="grid-container">
-  {%- for post in site.posts offset: 0 limit: 1 -%}
-  <article class="featured">
-      {% if post.image %}
-        <img src="{{ post.image | relative_url }}">
-      {% else %}
-        {% assign postImage = "/assets/img/image-default.png" %}
-        <img src="{{ postImage | relative_url }}">
-      {% endif %}
-      <div>
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
-          {%- if site.show_excerpts -%}
-              <p><span>{{ post.excerpt | strip_html |escape }}</span></p>
-          {%- endif -%}
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <p><span class="post-meta date">{{ post.date | date: date_format }}</span></p>
-      </div>
-  </article>
-  {%- endfor -%}
-  {%- for post in site.posts offset: 1 limit: null -%}
-  <article class="card">
-      {% if post.image %}
-        <img src="{{ post.image | relative_url }}">
-      {% else %}
-        {% assign postImage = "/assets/img/image-default.png" %}
-        <img src="{{ postImage | relative_url }}">
-      {% endif %}
-      <div>
-          <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
-          {%- if site.show_excerpts -%}
-              <p><span>{{ post.excerpt | strip_html |escape }}</span></p>
-          {%- endif -%}
-          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-          <p><span class="post-meta date">{{ post.date | date: date_format }}</span></p>
-      </div>
-  </article>
-  {%- endfor -%}
+{%- include navbar.html -%}
+
+<!-- Breadcrumb -->
+<nav class="container mt-lg-4 pt-5" aria-label="breadcrumb">
+<ol class="breadcrumb mb-0 pt-5">
+  <li class="breadcrumb-item">
+    <a href="/"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+  </li>
+  <li class="breadcrumb-item active" aria-current="page">Blog</li>
+</ol>
+</nav>
+
+
+<!-- Page content -->
+<section class="container mt-4 mb-lg-5 pt-lg-2 pb-5">
+
+<!-- Page title + Layout switcher + Search form -->
+<div class="row align-items-end gy-3 mb-4 pb-lg-3 pb-1">
+  <div class="col-lg-5 col-md-4">
+    <h1 class="mb-2 mb-md-0">Our Posts</h1>
+  </div>
+  <div class="col-lg-7 col-md-8"></div>
 </div>
+
+<!-- Item -->
+{%- for post in site.posts -%}
+<article class="card border-0 shadow-sm overflow-hidden mb-4">
+  <div class="row g-0">
+    <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('{{ post.image | relative_url }}'); min-height: 15rem; background-position-y:center; background-position-x:-50px">
+      <a href="{{ post.url | relative_url }}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
+    </div>
+    <div class="col-sm-8">
+      <div class="card-body">
+        <div class="d-flex align-items-center mb-3">
+          <a href="#" class="badge fs-sm text-nav bg-secondary text-decoration-none">{{ post.tag | escape }}</a>
+          {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+          <span class="fs-sm text-muted border-start ps-3 ms-3">{{ post.date | date: date_format }}</span>
+        </div>
+        <h3 class="h4">
+          <a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h3>
+        <p>{{ post.excerpt | strip_html |escape }}</p>
+        <hr class="my-4">
+        <div class="d-flex align-items-center justify-content-between">
+          <a href="#" class="d-flex align-items-center fw-bold text-dark text-decoration-none me-3">
+            <img src="{{ post.authorImage | escape }}" class="rounded-circle me-3" width="48" alt="Avatar">
+            {{ post.author | escape }}
+          </a>
+          <div class="d-flex align-items-center text-muted">
+            <div class="d-flex align-items-center me-3">
+              <i class="bx bx-like fs-lg me-1"></i>
+              <span class="fs-sm">8</span>
+            </div>
+            <div class="d-flex align-items-center me-3">
+              <i class="bx bx-comment fs-lg me-1"></i>
+              <span class="fs-sm">7</span>
+            </div>
+            <div class="d-flex align-items-center">
+              <i class="bx bx-share-alt fs-lg me-1"></i>
+              <span class="fs-sm">4</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</article>
+{%- endfor -%}

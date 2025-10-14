@@ -4,10 +4,10 @@ title: "Lessons Learned: On the Road to Producing An AppExchange App"
 date: 2025-04-30 08:00:00 -0400
 author: Tamara Chance
 authorTitle: Software Developer
-authorImage: assets/img/tamara-profile.jpeg
+authorImage: /assets/img/tamara-profile.jpeg
 categories: salesforce agentforce AI
-image: assets/img/lessons-learned.png
-snippet: assets/img/lessons-learned-snippet.png
+image: /assets/img/lessons-learned.png
+snippet: /assets/img/lessons-learned-snippet.png
 tag: Salesforce AppExchange
 ---
 This post isn’t a technical tutorial or a finished success story. It’s a behind-the-scenes look at the real process of taking an idea, turning it into a product, and preparing to hand it over for Salesforce’s most rigorous review.

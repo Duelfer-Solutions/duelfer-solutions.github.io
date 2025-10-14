@@ -1,0 +1,116 @@
+---
+layout: landing
+title: Contact
+permalink: /contact
+---
+
+{%- include navbar.html -%}
+
+<!-- Links + Contact form -->
+<section class="position-relative bg-secondary pt-5">
+    <div class="container position-relative zindex-2 pt-5">
+
+        <!-- Breadcrumb -->
+        <nav class="pt-lg-4 pb-3 mb-2 mb-sm-3" aria-label="breadcrumb">
+        <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+            <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Contact</li>
+        </ol>
+        </nav>
+
+        <div class="row">
+
+        <!-- Contact links -->
+        <div class="col-xl-4 col-lg-5 pb-4 pb-sm-5 mb-2 mb-sm-0">
+            <div class="pe-lg-4 pe-xl-0">
+                <h2 class="h1 mb-lg-4">Get in Touch</h2>
+                <p class="pb-2 pb-md-4 pb-lg-5">Have a project in mind? To request a quote contact us directly or fill out the form and let us know how we can help.</p>
+                <h3 class="mb-lg-4">Contact Info</h3>
+                <ul class="list-unstyled pb-3 pb-md-4 pb-lg-5 mb-2">
+                <li class="mb-2">
+                    <a href="mailto:example@email.com" class="nav-link d-flex align-items-center p-0">
+                        <i class="bx bx-envelope fs-xl text-primary me-2"></i>
+                        info@duelfersolutions.com
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="tel:4065550120" class="nav-link d-flex align-items-center p-0">
+                    <i class="bx bx-phone-call fs-xl text-primary me-2"></i>
+                    (704)&nbsp;762&#8209;1824
+                    </a>
+                </li>
+                <li class="mb-2">
+                    <a href="#" class="nav-link d-flex align-items-center p-0">
+                        <i class="bx bx-map fs-xl text-primary me-2"></i>
+                        5540 Centerview Dr Ste 204 PMB 400321<br/>
+                        Raleigh, North Carolina 27606-8012
+                        </a>
+                </li>
+                </ul>
+                <div class="d-flex">
+                    <a href="https://www.linkedin.com/company/duelfer-solutions/" class="btn btn-icon btn-outline-secondary btn-linkedin me-3" aria-label="LinkedIn">
+                        <i class="bx bxl-linkedin"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="col-xl-6 col-lg-7 offset-xl-2">
+            <div class="card border-light shadow-lg py-3 p-sm-4 p-md-5">
+            <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
+            <div class="card-body position-relative zindex-2">
+                <h2 class="card-title pb-3 mb-4">Tell us about yourself</h2>
+                <form class="row g-4 needs-validation" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DfJ000002ZxlY" method="POST" novalidate>
+                    <input type=hidden name="oid" value="00DfJ000002ZxlY">
+                    <input type=hidden name="retURL" value="https://duelfersolutions.com/thanks">
+
+                    <!--  ----------------------------------------------------------------------  -->
+                    <!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+                    <!--  these lines if you wish to test in debug mode.                          -->
+                    <!--  <input type="hidden" name="debug" value=1>                              -->
+                    <!--  <input type="hidden" name="debugEmail"                                  -->
+                    <!--  value="jon@duelfersolutions.com">                                       -->
+                    <!--  ----------------------------------------------------------------------  -->
+                    <div class="col-6">
+                        <label for="first_name" class="form-label fs-base">First Name</label>
+                        <input id="first_name" maxlength="40" name="first_name" type="text" class="form-control form-control-lg" required>
+                        <div class="invalid-feedback">Please enter your full name!</div>
+                    </div>
+                    <div class="col-6">
+                        <label for="last_name" class="form-label fs-base">Last Name</label>
+                        <input id="last_name" maxlength="80" name="last_name" type="text" class="form-control form-control-lg" required>
+                        <div class="invalid-feedback">Please enter your full name!</div>
+                    </div>
+                    <div class="col-12">
+                        <label for="email" class="form-label fs-base">Email</label>
+                        <input id="email" maxlength="80" name="email" type="email" class="form-control form-control-lg" required>
+                        <div class="invalid-feedback">Please provide a valid email address!</div>
+                    </div>
+                    <div class="col-12">
+                        <label for="company" class="form-label fs-base">Company</label>
+                        <input id="company" maxlength="40" name="company" type="text" class="form-control form-control-lg" required>
+                        <div class="invalid-feedback">Please enter your company!</div>
+                    </div>
+                    <div class="col-12">
+                        <label for="title" class="form-label fs-base">Title</label>
+                        <input id="title" maxlength="40" name="title" type="text" class="form-control form-control-lg" required>
+                        <div class="invalid-feedback">Please provide your title!</div>
+                    </div>
+                    <div class="col-12">
+                        <label for="description" class="form-label fs-base">Description</label>
+                        <textarea id="description" name="description" maxlength="255" class="form-control form-control-lg"></textarea>
+                    </div>
+                    <div class="col-12 pt-2 pt-sm-3">
+                        <button type="submit" name="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Submit</button>
+                    </div>
+                </form>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="position-absolute bottom-0 start-0 w-100 bg-light" style="height: 8rem;"></div>
+</section>

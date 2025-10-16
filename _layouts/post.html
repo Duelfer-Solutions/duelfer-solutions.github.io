@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post-wrapper
 ---
 <style>
     .post-featured-image {
@@ -9,8 +9,45 @@ layout: default
     }
 </style>
 
-<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+{%- include navbar.html -%}
 
+<!-- Breadcrumb -->
+<nav class="pt-4 mt-lg-3" aria-label="breadcrumb" style="margin-top: 5rem !important;">
+  <ol class="breadcrumb mb-0">
+    <li class="breadcrumb-item">
+      <a href="/"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+    </li>
+    <li class="breadcrumb-item">
+      <a href="/blog">Blog</a>
+    </li>
+    <li class="breadcrumb-item active" aria-current="page">{{ page.title | escape }}</li>
+  </ol> 
+</nav>
+
+<!-- Post title + Meta  -->
+<section class="mt-4 pt-lg-2 pb-3">
+  <h1 class="pb-3" style="max-width: 970px;">{{ page.title | escape }}</h1>
+  <div class="d-flex flex-md-row flex-column align-items-md-center justify-content-md-between mb-3">
+    <div class="d-flex align-items-center flex-wrap text-muted mb-md-0 mb-4">
+      <div class="fs-xs border-end pe-3 me-3 mb-2">
+        <span class="badge bg-faded-primary text-primary fs-base">{{ page.tag | escape }}</span>
+      </div>
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      <div class="fs-sm border-end pe-3 me-3 mb-2">{{ page.date | date: date_format }}</div>
+    </div>
+    <div class="d-flex align-items-center position-relative ps-md-3 pe-lg-5 mb-2">
+      <img src="{{ page.authorImage | escape }}" class="rounded-circle" width="60" alt="Avatar">
+      <div class="ps-3">
+        <h6 class="mb-1">Author</h6>
+        <p class="fw-semibold stretched-link">{{ page.author | escape }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Post content + Sharing -->
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
   <header class="post-header">
     {%- if page.image -%}
       <img src="{{ page.image | relative_url }}" alt="" class="post-featured-image" />

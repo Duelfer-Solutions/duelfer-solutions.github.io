@@ -32,7 +32,7 @@ permalink: /blog/
 {%- for post in site.posts -%}
 <article class="card border-0 shadow-sm overflow-hidden mb-4">
   <div class="row g-0">
-    <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('{{ post.image | relative_url }}'); min-height: 15rem; background-position-y:center; background-position-x:-50px">
+    <div class="col-sm-4 position-relative bg-repeat-0 bg-size-cover" style="background-image: url('{{ post.image | relative_url }}'); min-height: 15rem; background-position-y:center; background-position-x:-35px">
       <a href="{{ post.url | relative_url }}" class="position-absolute top-0 start-0 w-100 h-100" aria-label="Read more"></a>
     </div>
     <div class="col-sm-8">
@@ -52,20 +52,6 @@ permalink: /blog/
             <img src="{{ post.authorImage | escape }}" class="rounded-circle me-3" width="48" alt="Avatar">
             {{ post.author | escape }}
           </a>
-          <div class="d-flex align-items-center text-muted">
-            <div class="d-flex align-items-center me-3">
-              <i class="bx bx-like fs-lg me-1"></i>
-              <span class="fs-sm">8</span>
-            </div>
-            <div class="d-flex align-items-center me-3">
-              <i class="bx bx-comment fs-lg me-1"></i>
-              <span class="fs-sm">7</span>
-            </div>
-            <div class="d-flex align-items-center">
-              <i class="bx bx-share-alt fs-lg me-1"></i>
-              <span class="fs-sm">4</span>
-            </div>
-          </div>
         </div>
       </div>
     </div>

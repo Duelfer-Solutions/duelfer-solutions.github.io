@@ -4,6 +4,11 @@ title: Contact
 permalink: /contact
 ---
 
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+
 {%- include navbar.html -%}
 
 <!-- Links + Contact form -->
@@ -63,7 +68,9 @@ permalink: /contact
             <div class="bg-dark position-absolute top-0 start-0 w-100 h-100 rounded-3 d-none d-dark-mode-block"></div>
             <div class="card-body position-relative zindex-2">
                 <h2 class="card-title pb-3 mb-4">Tell us about yourself</h2>
+
                 <form class="row g-4 needs-validation" action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00DfJ000002ZxlY" method="POST" novalidate>
+                    <input type=hidden name='captcha_settings' value='{"keyname":"keypair","fallback":"true","orgId":"00DfJ000002ZxlY","ts":""}'>
                     <input type=hidden name="oid" value="00DfJ000002ZxlY">
                     <input type=hidden name="retURL" value="https://duelfersolutions.com/thanks">
 
@@ -103,6 +110,7 @@ permalink: /contact
                         <label for="description" class="form-label fs-base">Description</label>
                         <textarea id="description" name="description" maxlength="255" class="form-control form-control-lg"></textarea>
                     </div>
+                    <div class="g-recaptcha" data-sitekey="6Lfije0rAAAAAJO3P7LLU-5U_0RUE4e2jlfp_p4t"></div><br>
                     <div class="col-12 pt-2 pt-sm-3">
                         <button type="submit" name="submit" class="btn btn-lg btn-primary w-100 w-sm-auto">Submit</button>
                     </div>

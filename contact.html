@@ -5,9 +5,17 @@ permalink: /contact
 ---
 
 <script src="https://www.google.com/recaptcha/api.js"></script>
-<script>
-function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
-</script>
+<style>
+    #g-recaptcha-response {
+        display: block !important;
+        position: absolute;
+        margin: -78px 0 0 0 !important;
+        width: 302px !important;
+        height: 76px !important;
+        z-index: -999999;
+        opacity: 0;
+    }
+</style>
 
 {%- include navbar.html -%}
 
@@ -122,3 +130,16 @@ function timestamp() { var response = document.getElementById("g-recaptcha-respo
     </div>
     <div class="position-absolute bottom-0 start-0 w-100 bg-light" style="height: 8rem;"></div>
 </section>
+
+<script>
+    function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+    window.addEventListener('load', () => {
+        const $recaptcha = document.querySelector('#g-recaptcha-response');
+        if ($recaptcha) {
+            $recaptcha.setAttribute('required', 'required');
+        }
+        $recaptcha.oninvalid = function(e) {
+            alert("Please complete the reCAPTCHA before submitting - we're trying to avoid a ton of bot submissions, thanks!");
+        };
+    })
+</script>

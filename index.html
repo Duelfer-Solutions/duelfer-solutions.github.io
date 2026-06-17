@@ -382,10 +382,10 @@ permalink: /
           </div>
           <div class="card-footer py-4">
             <div class="d-inline-flex align-items-center position-relative me-3">
-              <img src="assets/img/tamara-profile.jpeg" class="rounded-circle me-3" width="48" alt="Tamara">
+              <img src="{{ post.authorImage }}" class="rounded-circle me-3" width="48" alt="{{ post.author }}">
               <div>
-                <div class="nav-link p-0 fw-bold text-decoration-none stretched-link">Tamara Chance</div>
-                <span class="fs-sm text-muted">Software Developer</span>
+                <div class="nav-link p-0 fw-bold text-decoration-none stretched-link">{{ post.author }}</div>
+                <span class="fs-sm text-muted">{{ post.authorTitle }}</span>
               </div>
             </div>
           </div>

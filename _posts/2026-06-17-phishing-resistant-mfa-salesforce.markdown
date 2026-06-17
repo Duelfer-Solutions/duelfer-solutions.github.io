@@ -14,7 +14,7 @@ Most Salesforce orgs have MFA turned on. Fewer have it configured in a way that 
 
 Standard time-based one-time passwords (TOTP) — those six-digit codes from an authenticator app — do add a second factor, but they're not phishing-resistant. A real-time phishing attack can capture a TOTP code and replay it before it expires. The user types their password and code into a convincing fake login page, and the attacker uses both instantly on the real site. The second factor was bypassed without the user ever knowing.
 
-Phishing-resistant MFA works differently. It uses cryptographic credentials that are bound to the origin — the actual domain — of the site requesting authentication. Even if a user lands on a fake Salesforce login page, the credential won't work there. It was registered for `login.salesforce.com`, and nothing else.
+Phishing-resistant MFA works differently. It uses cryptographic credentials that are bound to the origin — the actual domain — of the site requesting authentication. Even if a user lands on a fake Salesforce login page, the credential won't work there. It was registered for login.salesforce.com, and nothing else.
 
 Salesforce supports phishing-resistant MFA through two mechanisms: **hardware security keys** (like YubiKey) and **built-in platform authenticators** (Touch ID, Face ID, Windows Hello). Both use the [FIDO2/WebAuthn standard](https://help.salesforce.com/s/articleView?id=sf.security_mfa_fido2_overview.htm&type=5). This guide focuses on built-in authenticators — the option most users already have on their devices and the easiest to roll out at scale.
 

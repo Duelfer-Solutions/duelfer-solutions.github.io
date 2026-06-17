@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Setting Up Phishing-Resistant MFA for Salesforce Using Built-In Authenticators"
-date: 2026-06-17 08:00:00 -0400
+date: 2026-06-17 07:00:00 -0400
 author: Jon Duelfer
 authorTitle: Founder & Salesforce Consultant
 authorImage: /assets/img/jon-profile.jpg

@@ -6,7 +6,8 @@ author: Jon Duelfer
 authorTitle: Founder & Salesforce Consultant
 authorImage: /assets/img/jon-profile.jpg
 categories: salesforce security
-image: /assets/img/stockImages/security-lock-laptop.png
+image: /assets/img/phishing-resistant-mfa.png
+snippet: /assets/img/phishing-resistant-mfa-snippet.png
 tag: Salesforce Security
 ---
 Most Salesforce orgs have MFA turned on. Fewer have it configured in a way that actually stops a determined attacker.

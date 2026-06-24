@@ -5,7 +5,7 @@ subtitle: "How develop AI Agents for our Clients"
 date: 2026-06-24 08:00:00 -0400
 author: Jon Duelfer
 authorTitle: Founder & Consultant
-authorImage: /assets/img/jon-profile.jpeg
+authorImage: /assets/img/jon-profile.jpg
 categories: AI agents development
 image: /assets/img/isolated-ai-agents.png
 snippet: /assets/img/isolated-ai-agents-snippet.png
@@ -56,7 +56,7 @@ curl -fsSL https://claude.ai/install.sh | bash
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc && source ~/.bashrc
 ```
 
-Install Node.js, as you'll need it for pretty much anything the agent produces or works with https://nodejs.org/en/download:
+Install Node.js, as you'll need it for pretty much anything the agent produces or works with [Node.js Download](https://nodejs.org/en/download):
 ```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.5/install.sh | bash
 . "$HOME/.nvm/nvm.sh"
@@ -71,8 +71,11 @@ One of the friction points with containers is that you lose direct access to the
 
 Open VS Code on your local machine against the folder you'll be mounting. This process looks like the following:
 1. Open WSL.
-2. `cd` into an empty folder reserved for your client.
-3. Execute `code .` (VS Code server for Linux will be installed).
+2. _cd_ into an empty folder reserved for your client.
+3. Execute the following (VS Code server for Linux will be installed):
+```
+code .
+```
 
 An _empty_ folder is necessary because you are giving lxc a placeholder to _mount_ its contents on your device's actual file system.
 
